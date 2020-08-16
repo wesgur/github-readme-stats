@@ -92,6 +92,9 @@ const renderTopLanguages = (topLangs, options = {}) => {
       return !langsToHide[lowercaseTrim(lang.name)];
     });
 
+  // gets top 5 languages
+  langs = langs.slice(0, 5);
+
   const totalLanguageSize = langs.reduce((acc, curr) => {
     return acc + curr.size;
   }, 0);
